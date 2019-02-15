@@ -1,24 +1,21 @@
 
 function mostrar()
 {
-	var perro_uno
-	var perro_dos
-	var peso_uno
-	var peso_dos
-	var suma
+	var perrouno;
+	var perrodos;
+	var pesouno;
+	var pesodos;
+	var result;
 
- 	peso_dos=parseInt(peso_dos)
- 	peso_uno=parseInt(peso_uno)
+	perrouno= prompt ("Nombre de la mascota");
+	perrodos= prompt ("Nombre de la mascota");
+	pesouno=prompt("Peso de la mascota");
+	pesodos=prompt("Peso de la mascota");
 
-	perro_uno= Manchita;
-	perro_dos= Tomi;
-	peso_uno=14;
-	peso_dos=18;
+	pesouno=parseInt (pesouno);
+	pesodos=parseInt (pesodos);
 
-	result=peso_uno + peso_dos;
-	suma= result;
+	result = (pesouno + pesodos);
 
-	alert("Tenes dos mascotas " perro_uno " y " perro_dos ", que pesan" peso_uno " y" peso_dos "kilos, la suma de los kilos es" suma);
-
-
+	alert("Tenes dos mascotas "+perrouno+" y "+perrodos+", que pesan"+pesouno+ " y"+pesodos +" kilos, la suma de los kilos es" + result);
 }
