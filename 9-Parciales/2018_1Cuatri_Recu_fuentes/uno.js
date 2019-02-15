@@ -17,5 +17,5 @@ function mostrar()
 
 	result = (pesouno + pesodos);
 
-	alert("Tenes dos mascotas "+perrouno+" y "+perrodos+", que pesan"+pesouno+ " y"+pesodos +" kilos, la suma de los kilos es" + result);
+	alert("Tenes dos mascotas "+perrouno+" y "+perrodos+", que pesan "+pesouno+ " y "+pesodos +" kilos, la suma de los kilos es " + result);
 }
