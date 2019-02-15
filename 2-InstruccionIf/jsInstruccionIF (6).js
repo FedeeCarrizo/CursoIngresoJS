@@ -20,7 +20,7 @@ function mostrar()
 		   }
 		   else{
 
-		   	mensaje= "sos adolescente";
+		   	mensaje= "Es adolescente";
 		   }
 	}
 
