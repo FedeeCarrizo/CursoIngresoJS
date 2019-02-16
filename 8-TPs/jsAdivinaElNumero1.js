@@ -28,10 +28,23 @@ function verificar()
 	numeroingresado=numero.value;
 	//alert(numeroingresado);
 	intentos.value=contadorIntentos;
+
 	if (numeroingresado==numeroSecreto)
 	{
-		mensaje=("Sos un genio y lo hiciste en "+contadorIntentos+ " intentos");
-	}
+			switch(numeroSecreto)
+		{
+				case 1:
+					mensaje="Que suerte";
+					break;
+
+				case 2:
+					mensaje="Casi casi";
+					break;
+
+				case 3:
+					mensaje="Entraste por la ventana";
+					break;
+		}
 	else
 	{
 		if (numeroingresado<numeroSecreto)
@@ -43,5 +56,11 @@ function verificar()
 			mensaje=("Te pasaste");
 		}
 	}
+	
+
+	}
 	alert(mensaje);
+	
+	
+
 }
