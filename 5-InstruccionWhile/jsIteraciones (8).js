@@ -17,11 +17,11 @@ function mostrar()
 		respuesta=prompt(" => Si para continuar");
 		if(numero>0)
 		{
-			positivo=positivo*contador
+			positivo=positivo+numero
 		}
 		else
 		{
-				negativo=negativo*contador
+			negativo=negativo*contador
 		}
 
 		if(respuesta!="si")

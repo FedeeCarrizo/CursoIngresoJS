@@ -6,8 +6,9 @@ function mostrar()
 	var minimo;
 	var respuesta='si';
 
-	maximo= -999;
-	minimo= 999;
+	
+	var bandera;
+	bandera="Es la primera";
 
 	while(respuesta=="si")
 
@@ -15,15 +16,25 @@ function mostrar()
 		contador=contador+1;
 		numero=prompt("Ingrese el numero "+contador+" #: ");
 		numero=parseInt(numero);
-		if(numero>maximo)
+		if(bandera=="Es la primera")
 		{
-			maximo=numero	
+			maximo=numero;
+			minimo=numero;
+			bandera="lalala";
 		}
+		else
+		{
+			if(numero>maximo)
+			{
+				maximo=numero	
+			}
 
-		if(numero<minimo)
-		{
-			minimo=numero
+			if(numero<minimo)
+			{
+				minimo=numero
+			}
 		}
+		
 
 		respuesta=prompt(" => Si para continuar")
 		
