@@ -4,7 +4,7 @@ function mostrar()
 	//Math.random();
 	var random;
 
-	random=Math.floor(Math.random() *10) + 1;
+	random=Math.floor(Math.random() *100) + 1;
 
 	alert(random);
 

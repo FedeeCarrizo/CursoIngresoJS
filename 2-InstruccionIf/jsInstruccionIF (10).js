@@ -1,30 +1,24 @@
 function mostrar()
 {
-	//Genero el número RANDOM entre 1 y 10 
 	var random;
 	var mensaje;
-	
+
 	random=Math.floor(Math.random() *10) + 1;
 
-	if(random >8) 
+	if(random > 8)
 	{
 		mensaje="Excelente"
 	}
 	else
 	{
-		if(random<4)
+		if (random <5 ) 
 		{
-			mensaje="Vamos, para la proxima se puede"
+			mensaje="Vamos, la proxima se puede"
 		}
 		else
 		{
 			mensaje="Aprobó"
 		}
 	}
-	alert(random+ " "+ mensaje);
-
-
-	
-
-
-}//FIN DE LA FUNCIÓN
+	alert(random+" "+mensaje);
+}
