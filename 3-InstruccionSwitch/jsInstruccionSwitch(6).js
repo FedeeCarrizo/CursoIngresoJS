@@ -12,8 +12,10 @@ function mostrar()
 		case 9:
 		case 10:
 		case 11:
-			mensaje="Es de mañana";
-			break;
+
+		mensaje="Es de mañana"
+
+		break;
 
 		case 12:
 		case 13:
@@ -23,8 +25,10 @@ function mostrar()
 		case 17:
 		case 18:
 		case 19:
-			mensaje="Es de tarde";
-			break;
+
+		mensaje="Es de tarde"
+
+		break;
 
 		case 20:
 		case 21:
@@ -38,13 +42,14 @@ function mostrar()
 		case 4:
 		case 5:
 		case 6:
-			mensaje="Es de noche";
-			break;
+
+		mensaje="Es de noche"
+
+		break;
 
 		default:
-			mensaje="La hora no existe";
 
-
+		mensaje="La hora no existe"
 	}
 	alert(mensaje);
 	
