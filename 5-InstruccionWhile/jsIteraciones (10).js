@@ -1,61 +1,71 @@
 function mostrar()
 {
+	var respuesta;
+	var numero;
+	var sumanegativos;
+	var sumapositivos;
+	var contadorNegativos;
+	var contadorPositivos;
+	var contadorCeros;
+	var contadorPares;
+	var contador;
+	var diferenciaFinal;
 
-	var positivos=0;
-	var negativos=1;
-	var contador=0;
-	var mensaje;
-	var cantidadnegativos;
-	var cantidadpositivos;
-	var sumapositivo;
-	var sumanegativo;
-	var cantidadpares;
-	var ceros;
-	var prompositivo;
-	var promnegativo;
-	var respuesta="si";
+	respuesta="Si";
+	contador=0;
+	sumapositivos=0;
+	sumanegativos=0;
+	contadorPositivos=0;
+	contadorNegativos=0;
+	contadorCeros=0;
+	contadorPares=0;
+	diferenciaFinal=0;
 
-	sumanegativo=0;
-	sumanegativo=0;
-	cantidadpares=0;
-	cantidadpositivos=0;
-	cantidadnegativos=0;
-	ceros=0;
-
-	while(1)
-
+	while(respuesta=="Si")
 	{
-		contador=contador+1;
-		numero=prompt("Ingrese el numero "+contador+" #: ");
+		numero=prompt("Ingrese un numero");
 		numero=parseInt(numero);
-		//acumulador=acumulador+ numero;
-
-		respuesta=prompt(" => Si para continuar");
-
-		if (numero<0) 
+		//suma de negativos
+		if(numero < 0)
 		{
-			sumanegativo=sumanegativo+numero;
-			cantidadnegativos=cantidadnegativos+1;
-		}
+			sumanegativos=sumanegativos+numero
+			contadorNegativos++;
+			promedioNegativos=sumanegativos/contadorNegativos;
+		}//suma de positivos
 		else
 		{
-			if (numero>0) 
-			{
-				sumapositivo=sumapositivo+numero;
-				cantidadpositivos=cantidadpositivos+1
-			}
-			else
-			{
-				ceros=ceros+1
-			}
-
-		if (cantidadpares) 
+			sumapositivos=sumapositivos+numero;
+			contadorPositivos++;
+			promedioPositivos=sumapositivos/contadorPositivos
+		}
+		//contador de ceros
+		if(numero == 0)
 		{
-			cantidadpares=cantidadpares+1
-		}	
+			contadorCeros++;
+		}
+		//contador de pares
+		if(numero % 2 ==0)
+		{
+			contadorPares++;
+		}
+
+
+		respuesta=prompt("Ingrese Si para continuar");
 	}
-	
+	diferenciaFinal=sumapositivos - sumanegativos
+	document.write(
+					"1) La suma de los negativos es "+sumanegativos+ "<br>"+
+					"2) La suma de los positivos es "+sumapositivos+ "<br>"+
+					"3) La cantidad de positivos son"+contadorPositivos+ "<br>"+
+					"4) La cantidad de negativos son "+contadorNegativos+ "<br>"+
+					"5) La cantidad de ceros es "+contadorCeros+ "<br>"+
+					"6) La cantidad de numeros pares es de "+contadorPares+ "<br>"+
+					"7) El promedio de los negativos es "+promedioNegativos+ "<br>"+
+					"8) El promedio de los positivos es de "+promedioPositivos+ "<br>"+
+					"9) Diferencia entre postivos y negativos es de "+diferenciaFinal+ "<br>")
 
 
 
+
+		
 }//FIN DE LA FUNCIÓN
