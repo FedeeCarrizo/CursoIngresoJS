@@ -1,53 +1,76 @@
 function mostrar()
 {
+	var velocidad;
+	var combustible;
 	var contador;
-	var sexo;
-	var nota;
-	var promedio;
-	var acumuladornota;
-	var bandera;
-	var notaminima;
-	var cantidadvarones;
-	var mensaje;
-	var minimo;
+	var promedioVelocidad;
+	var minimaVelocidad;
+	var minimaVelocidadCombustible;
+	var maximaVelocidad;
+	var maximaVelocidadCombustible;
+	var combustibleLiquido;
+	var velocidadCombustibleSolido;
+	var acumulador;
 
 	contador=0;
-	acumuladornota=0;
-	
+	acumulador=0;
+	promedioVelocidad=0;
+	minimaVelocidad=0;
+	combustibleLiquido=0;
 
-	while(contador<5)
+	while(contador < 5)
 	{
 		contador=contador+1
-		nota=prompt("Ingrese nota del 1 al 10");
-		sexo=prompt("ingrese si es f o m");
-		if(bandera=="Es la primera")
-		{
-			minimo=nota;
-			bandera="lalala";
-		}
-		else
-			if(nota<minimo)
-			{
-				nota=minimo
-			}
 
-		while(sexo !="f" && sexo!="m")
+		velocidad=prompt("Ingrese una velocidad");
+		velocidad=parseInt(velocidad);
+
+		promedioVelocidad=promedioVelocidad+velocidad;
+
+		while(velocidad <0 || velocidad > 250)
 		{
-			sexo=prompt("ingrese si es f o m");	
+			velocidad=prompt("Error,ingrese una velocidad");
 		}
 		
-		if (nota>-1 && nota<11) 
+		combustible=prompt("Ingrese tipo de combustible 'l' o 's'");
+
+		while(combustible != "l" && combustible != "s")
 		{
-			nota=parseInt(nota)
-			nota=prompt("Ingrese nota del 1 al 10");
-			acumuladornota=acumuladornota+nota;
+			combustible=prompt("Error, ingrese tipo de combustible 'l' o 's'");
 		}
 
-		if (nota>5 && sexo=="m")
+		if(contador < 5 && combustible == "s")
 		{
-			cantidadvarones=cantidadvarones+1;
-		}	
+			maximaVelocidad=velocidad;
+			maximaVelocidadCombustible=combustible;
+		}
+		if(contador < 5)
+		{
+			minimaVelocidad=velocidad;
+			minimaVelocidadCombustible=combustible;
+		}
+		else
+		{
+			if (velocidad<minimaVelocidad) 
+			{
+				minimaVelocidad=velocidad;
+				minimaVelocidadCombustible=combustible;
+			}
+		}
+		if(velocidad>99 && combustible == "l")
+		{
+			combustibleLiquido=combustibleLiquido+1
+		}
 	}
+	promedioVelocidad=promedioVelocidad/contador;
+	alert("El promedio de las velocidad "+promedioVelocidad+", la velocidad mas baja fue de "+minimaVelocidad+ "y el tipo de combustible usado fue "+minimaVelocidadCombustible+", los combustibles liquidos que superaron los 100 km por hora son "+combustibleLiquido+" y la velocidad mas alta de los solidos fue de "+maximaVelocidad+ "y es de tipo "+maximaVelocidadCombustible);
+
+
+
 
 	
+
+
 }
+
+
