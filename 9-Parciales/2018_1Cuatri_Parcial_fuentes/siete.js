@@ -44,6 +44,14 @@ function mostrar()
 			maximaVelocidad=velocidad;
 			maximaVelocidadCombustible=combustible;
 		}
+		else
+		{
+			if (velocidad>maximaVelocidad) 
+			{
+				maximaVelocidad=velocidad
+				maximaVelocidadCombustible=combustible
+			}
+		}
 		if(contador < 5)
 		{
 			minimaVelocidad=velocidad;
