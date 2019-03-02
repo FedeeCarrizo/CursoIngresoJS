@@ -9,12 +9,16 @@ function mostrar()
 	var paisSuperaCienSuperficie;
 	var contador;
 	var respuesta;
+	var superficieTotal;
+	var superficieMenor;
+	var superficieMenorNombre;
 
 	respuesta="Si";
 	contador=0;
 	superficieImpar=0;
 	superficieMenorACien=0;
 	superficieIgualCien=0;
+	superficieTotal=0;
 
 	while(respuesta == "Si")
 	{
@@ -46,7 +50,7 @@ function mostrar()
 				superficieIgualCien++;
 			}
 		}
-
+		//no anda
 		if (superficie >= 100) 
 		{
 			paisSuperaCien=pais;
@@ -60,8 +64,29 @@ function mostrar()
 				paisSuperaCienSuperficie=superficie;
 			}
 		}
+		//hasta aca
+		if (superficie > -100) 
+		{
+			superficieTotal=superficieTotal+superficie;
+			contador++;
+		}
+		if(superficie>0)
+		{
+			superficieMenor=superfice;
+			superficieMenorNombre=pais;
+		}
+		else
+			{
+				if (superficie>superficieMenor) 
+				{
+					superficieMenor=superficie;
+					superficieMenorNombre=pais;
+				}
+			}
+
 	}
-	alert(paisSuperaCien+ " "+ paisSuperaCienSuperficie);
+	promedio=superficieTotal/contador
+	alert(superficieMenorNombre + superficieMenor);
 
  	
 }
